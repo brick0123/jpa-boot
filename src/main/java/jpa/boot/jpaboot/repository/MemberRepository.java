@@ -1,18 +1,22 @@
 package jpa.boot.jpaboot.repository;
 
 import jpa.boot.jpaboot.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
+@RequiredArgsConstructor
+@Transactional
 @Repository
 public class MemberRepository {
 
     // 스프링이 엔티티 매니저를 만들어서 주입해줌
-    @PersistenceContext
-    private EntityManager em;
+//    @PersistenceContext
+//    @Autowired 스프링 데이터에서 @PersistenceContext 대신 가능하게 해줌
+    private final EntityManager em;
 
     public void save(Member member) {
         em.persist(member);
