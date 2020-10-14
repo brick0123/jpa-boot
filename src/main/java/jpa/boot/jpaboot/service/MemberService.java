@@ -3,6 +3,7 @@ package jpa.boot.jpaboot.service;
 import jpa.boot.jpaboot.domain.Member;
 import jpa.boot.jpaboot.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Transactional(readOnly = true) // 읽기 전용 Dirty Checking안 한다거나 성능을 최적화 해줌
 // public 메소드에만 적용됨
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;

@@ -1,0 +1,21 @@
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:test
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create # 스프링부트는 create-drop으로 실행됨
+#    properties:
+#      hibernate:
+##        show_sql: true (System.out)
+#        format_sql: true
+# 없어도 스프링부트가 test로 실행
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace # 쿼리스트링 로그
