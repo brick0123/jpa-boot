@@ -1,6 +1,8 @@
 package jpa.boot.jpaboot.domain;
 
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,6 +12,7 @@ import java.util.List;
 
 import static javax.persistence.FetchType.*;
 
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter@Setter
 @Table(name = "orders")
 @Entity
