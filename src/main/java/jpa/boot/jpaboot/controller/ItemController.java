@@ -3,15 +3,13 @@ package jpa.boot.jpaboot.controller;
 import jpa.boot.jpaboot.domain.item.Book;
 import jpa.boot.jpaboot.domain.item.Item;
 import jpa.boot.jpaboot.dto.BookResponseDto;
+import jpa.boot.jpaboot.dto.BookSaveRequestDto;
 import jpa.boot.jpaboot.dto.BookUpdateRequestDto;
 import jpa.boot.jpaboot.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,20 +22,15 @@ public class ItemController {
 
     @GetMapping("/items/new")
     public String createForm(Model model) {
-        model.addAttribute("form", new BookForm());
+        model.addAttribute("form", new BookSaveRequestDto());
         return "items/createItemForm";
     }
 
     @PostMapping("/items/new")
-    public String create(BookForm form) {
-        Book book = new Book();
-        book.setName(form.getName());
-        book.setAuthor(form.getAuthor());
-        book.setIsbn(form.getAuthor());
-        book.setStockQuantity(form.getStockQuantity());
-        book.setPrice(form.getPrice());
+    public String create(@ModelAttribute BookSaveRequestDto requestDto) {
 
-        itemService.saveItem(book);
+        itemService.saveItem(requestDto.toEntity());
+        // TODO 해결하기
 
         return "redirect:/";
     }

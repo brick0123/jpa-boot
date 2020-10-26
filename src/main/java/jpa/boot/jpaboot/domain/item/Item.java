@@ -2,13 +2,17 @@ package jpa.boot.jpaboot.domain.item;
 
 import jpa.boot.jpaboot.domain.Category;
 import jpa.boot.jpaboot.exception.NotEnoughStockException;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter @Setter
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "dtype")
