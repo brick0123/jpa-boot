@@ -47,22 +47,14 @@ public class ItemController {
 //        Book item = (Book)itemService.findOne(itemId);
         BookResponseDto responseDto = itemService.findOne(id);
 
-//        BookForm form = new BookForm();
-//        form.setId(item.getId());
-//        form.setName(item.getName());
-//        form.setPrice(item.getPrice());
-//        form.setStockQuantity(item.getStockQuantity());
-//        form.setAuthor(item.getAuthor());
-//        form.setIsbn(item.getIsbn());
-
         model.addAttribute("form", responseDto);
         return "items/updateItemForm";
     }
 
     @PostMapping("items/{itemId}/edit")
-    public String updateItem(@PathVariable("itemId") Long itemId, @ModelAttribute("form") BookUpdateRequestDto requestDto) {
+    public String updateItem(@PathVariable("itemId") Long id, @ModelAttribute("form") BookUpdateRequestDto requestDto) {
 
-//        itemService.saveItem();
+        itemService.update(id, requestDto);
         return "redirect:/items";
     }
 }

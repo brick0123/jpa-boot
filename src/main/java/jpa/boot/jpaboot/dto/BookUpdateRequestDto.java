@@ -1,10 +1,13 @@
 package jpa.boot.jpaboot.dto;
 
+import jpa.boot.jpaboot.domain.item.Book;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
+@Setter
 @NoArgsConstructor // test
 public class BookUpdateRequestDto {
 
