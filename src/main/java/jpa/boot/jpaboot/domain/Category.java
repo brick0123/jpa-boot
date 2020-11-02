@@ -10,7 +10,7 @@ import java.util.List;
 
 import static javax.persistence.FetchType.*;
 
-@Getter
+/*@Getter
 @Setter
 @Entity
 public class Category {
@@ -41,4 +41,4 @@ public class Category {
         child.setParent(this);
     }
 
-}
+}*/

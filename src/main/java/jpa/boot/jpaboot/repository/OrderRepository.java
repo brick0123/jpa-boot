@@ -26,7 +26,7 @@ public class OrderRepository {
         return em.find(Order.class, id);
     }
 
-    public List<Order> findAllByString(OrderSearch orderSearch) {
+    public List<Order> findAllByString(OrderSearchRequestDto orderSearch) {
         //language=JPAQL
         String jpql = "select o From Order o join o.member m";
         boolean isFirstCondition = true;
@@ -64,7 +64,7 @@ public class OrderRepository {
     /**
      * JPA Criteria
      */
-    public List<Order> findAllByCriteria(OrderSearch orderSearch) {
+    public List<Order> findAllByCriteria(OrderSearchRequestDto orderSearch) {
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<Order> cq = cb.createQuery(Order.class);
         Root<Order> o = cq.from(Order.class);

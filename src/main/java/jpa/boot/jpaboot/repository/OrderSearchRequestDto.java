@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class OrderSearch {
+public class OrderSearchRequestDto {
 
     private String memberName;
     private OrderStatus orderStatus;

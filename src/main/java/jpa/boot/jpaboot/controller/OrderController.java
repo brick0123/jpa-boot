@@ -3,7 +3,7 @@ package jpa.boot.jpaboot.controller;
 import jpa.boot.jpaboot.domain.Member;
 import jpa.boot.jpaboot.domain.Order;
 import jpa.boot.jpaboot.domain.item.Item;
-import jpa.boot.jpaboot.repository.OrderSearch;
+import jpa.boot.jpaboot.repository.OrderSearchRequestDto;
 import jpa.boot.jpaboot.service.ItemService;
 import jpa.boot.jpaboot.service.MemberService;
 import jpa.boot.jpaboot.service.OrderService;
@@ -44,7 +44,7 @@ public class OrderController {
     }
 
     @GetMapping("/orders")
-    public String orderList(@ModelAttribute("orderSearch") OrderSearch orderSearch, Model model) {
+    public String orderList(@ModelAttribute("orderSearch") OrderSearchRequestDto orderSearch, Model model) {
         List<Order> orders = orderService.findOrders(orderSearch);
         model.addAttribute("orders", orders);
 

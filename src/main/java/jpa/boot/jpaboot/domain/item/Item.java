@@ -1,6 +1,5 @@
 package jpa.boot.jpaboot.domain.item;
 
-import jpa.boot.jpaboot.domain.Category;
 import jpa.boot.jpaboot.exception.NotEnoughStockException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,8 +27,8 @@ public abstract class Item {
     private int price;
     private int stockQuantity;
 
-    @ManyToMany(mappedBy = "items")
-    private List<Category> categories = new ArrayList<>();
+/*    @ManyToMany(mappedBy = "items")
+    private List<Category> categories = new ArrayList<>();*/
 
     // == 비즈니스 로직 == //
 

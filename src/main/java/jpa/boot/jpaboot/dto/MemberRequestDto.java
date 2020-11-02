@@ -1,4 +1,4 @@
-package jpa.boot.jpaboot.controller;
+package jpa.boot.jpaboot.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +7,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Getter
 @Setter
-public class MemberForm {
+public class MemberRequestDto {
 
     @NotEmpty(message = "회원 이름은 필수 입니다.")
     private String name;
