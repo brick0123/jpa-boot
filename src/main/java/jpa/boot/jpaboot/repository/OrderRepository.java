@@ -2,6 +2,7 @@ package jpa.boot.jpaboot.repository;
 
 import jpa.boot.jpaboot.domain.Member;
 import jpa.boot.jpaboot.domain.Order;
+import jpa.boot.jpaboot.dto.OrderSearchRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;

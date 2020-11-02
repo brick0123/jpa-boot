@@ -3,7 +3,7 @@ package jpa.boot.jpaboot.controller;
 import jpa.boot.jpaboot.domain.Member;
 import jpa.boot.jpaboot.domain.Order;
 import jpa.boot.jpaboot.domain.item.Item;
-import jpa.boot.jpaboot.repository.OrderSearchRequestDto;
+import jpa.boot.jpaboot.dto.OrderSearchRequestDto;
 import jpa.boot.jpaboot.service.ItemService;
 import jpa.boot.jpaboot.service.MemberService;
 import jpa.boot.jpaboot.service.OrderService;
