@@ -3,7 +3,7 @@
 
 
 ### 사용 기술 및 환경
-- **Spring boot, Gradle, JPA, JUnit5, JAVA 8, H2, Thymeleaf, BootStrap**
+- **Spring boot, Gradle, JPA, JUnit5, JAVA 8, H2, Lombok, Thymeleaf, BootStrap**
 
   </br>
 <img src="https://user-images.githubusercontent.com/61832162/97833708-560ccf00-1d19-11eb-8e6e-15599b6e9256.png" width="50%"/><img src="https://user-images.githubusercontent.com/61832162/97833519-e26ac200-1d18-11eb-9ada-f27bb117d232.png" width="50%" height="100%">
