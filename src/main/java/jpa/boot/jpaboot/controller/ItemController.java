@@ -27,11 +27,8 @@ public class ItemController {
     }
 
     @PostMapping("/items/new")
-    public String create(@ModelAttribute BookSaveRequestDto requestDto) {
-
+    public String create(@RequestBody BookSaveRequestDto requestDto) {
         itemService.saveItem(requestDto.toEntity());
-        // TODO 해결하기
-
         return "redirect:/";
     }
 
